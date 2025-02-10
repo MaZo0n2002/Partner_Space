@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form class="ion-padding container">
+<ion-item class="ion-margin-vertical">
+  <ion-icon slot="start" name="person-outline"></ion-icon>
+  <ion-input 
+  type="name" 
+  placeholder="Name"
+  required
+  aria-label="Name"></ion-input>
+</ion-item>
+<ion-item class="ion-margin-vertical">
+  <ion-icon slot="start" name="mail-outline"></ion-icon>  
+  <ion-input 
+  type="email" 
+  placeholder="Email"
+  required
+  aria-label="Email"
+  ></ion-input>
+</ion-item>
+<ion-item class="ion-margin-vertical">
+  <ion-icon slot="start" name="call-outline"></ion-icon>  
+  <ion-input 
+  type="number" 
+  placeholder="Number"
+  required
+  aria-label="Number"
+  ></ion-input>
+</ion-item>
+<ion-item class="ion-margin-vertical">
+  <ion-icon slot="start" name="at-outline"></ion-icon>  
+  <ion-input 
+  type="username" 
+  placeholder="Username"
+  required
+  aria-label="Username"
+  ></ion-input>
+</ion-item>
+<ion-item class="ion-margin-vertical">
+  <ion-icon slot="start" name="lock-closed-outline"></ion-icon>  
+  <ion-input 
+  type="password" 
+  placeholder="Password"
+  required
+  aria-label="Password"
+  ></ion-input>
+</ion-item>
+<ion-button 
+expand="block" 
+shape="round" 
+type="submit"
+class="ion-margin-vertical" [routerLink]="['/home']">
+Signup
+</ion-button>
+</form>
+</ion-content>

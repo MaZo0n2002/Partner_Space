@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ED3CB79A-3708-43E3-B4DE-7DBD1CC499E9</title>
+    <defs>
+        <circle id="path-1" cx="12" cy="12" r="12"></circle>
+        <path d="M11.5068,5.2614 L6.7392,5.2614 L6.7392,0.4938 C6.7392,0.2226 6.5172,0 6.2454,0 L5.7546,0 C5.4834,0 5.2614,0.2226 5.2614,0.4938 L5.2614,5.2614 L0.4938,5.2614 C0.222,5.2614 0,5.4834 0,5.7546 L0,6.246 C0,6.5172 0.222,6.7392 0.4938,6.7392 L5.2614,6.7392 L5.2614,11.5068 C5.2614,11.778 5.4834,12 5.7546,12 L6.2454,12 C6.5172,12 6.7392,11.778 6.7392,11.5068 L6.7392,6.7392 L11.5068,6.7392 C11.778,6.7392 12,6.5172 12,6.246 L12,5.7546 C12,5.4834 11.778,5.2614 11.5068,5.2614" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Company-information" transform="translate(-301.000000, -474.000000)">
+            <g id="Group-2" transform="translate(20.000000, 415.000000)">
+                <g id="Componants/File-upload/02.-upload-file-EN" transform="translate(0.000000, 41.588235)">
+                    <g id="4.-Buttons/Radio-button/On" transform="translate(281.000000, 18.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="🎨-Color" fill="#279151" xlink:href="#path-1"></use>
+                        <g id="3-.ic/solid/ic_tick" mask="url(#mask-2)">
+                            <g transform="translate(6.000000, 6.000000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Mask" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

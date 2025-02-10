@@ -1,0 +1,15 @@
+/* Add to your component's CSS */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .ion-text-bold {
+    font-weight: 600;
+  }
+  
+  ion-item {
+    --highlight-color-focused: var(--ion-color-primary);
+    --border-radius: 8px;
+    --padding-start: 0;
+  }

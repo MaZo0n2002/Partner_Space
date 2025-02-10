@@ -1,0 +1,43 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" [routerLink]="['/signup']">Sign Up</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-title>Welcome to Partner Space</ion-title>
+  <div class="container">
+    <ion-grid class="ion-text-center">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-md="8">
+          <ion-img 
+            src="assets/images/login-back.png" 
+            alt="Welcome illustration"
+            class="welcome-image"
+          ></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+           <p class="ion-margin-bottom description-text">
+            You can follow up your Policies,<br>
+            Premiums Collection, Renewals,<br> 
+            Claims and Complaints
+          </p>
+           </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" class="ion-margin">
+    <ion-fab-button 
+      [routerLink]="['/login']" 
+      aria-label="Continue to login"
+    >
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

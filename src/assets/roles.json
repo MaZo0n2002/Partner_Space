@@ -1,0 +1,6 @@
+[
+  {"roleName":"Broker","value":"broker"},
+  {"roleName":"Customer","value":"customer"},
+  {"roleName":"Business source","value":"bs"}
+]
+

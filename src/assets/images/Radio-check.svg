@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>AAE271C4-2A20-4FF8-BF1A-8ECBA7508DF9</title>
+    <defs>
+        <circle id="path-1" cx="10" cy="10" r="10"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-choose" transform="translate(-112.000000, -240.000000)">
+            <g id="Group-2" transform="translate(20.000000, 210.000000)">
+                <g id="Controls/Radio/Radio-check" transform="translate(92.000000, 30.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#279151" xlink:href="#path-1"></use>
+                    <path d="M8.82918848,13.6279404 C8.73373224,13.7241173 8.60349664,13.7777778 8.46821242,13.7777778 C8.33292819,13.7777778 8.2026926,13.7241173 8.10723636,13.6279404 L5.22438295,10.7398248 C4.92520568,10.44015 4.92520568,9.95420863 5.22438295,9.65509576 L5.58535901,9.29342575 C5.88462978,8.99375098 6.36920343,8.99375098 6.6683807,9.29342575 L8.46821242,11.0963441 L13.3316193,6.22475608 C13.6308901,5.92508131 14.1159312,5.92508131 14.414641,6.22475608 L14.7756171,6.58642608 C15.0747943,6.88610086 15.0747943,7.37194856 14.7756171,7.67115509 L8.82918848,13.6279404 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

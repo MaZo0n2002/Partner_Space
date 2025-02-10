@@ -1,20 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="dashboard">
+      <ion-icon name="apps"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+</ion-tab-button>
+
+<ion-tab-button tab="policies">
+  <ion-icon name="document-text"></ion-icon>
+  <ion-label>Policies</ion-label>
+</ion-tab-button>
+
+<ion-tab-button tab="claims">
+ <ion-icon name="cash"></ion-icon>
+ <ion-label> Claims</ion-label>
+</ion-tab-button>
+
+
+<ion-tab-button tab="insurance">
+  <ion-icon name="car"></ion-icon>
+  <ion-label>Insurance</ion-label>
+ </ion-tab-button>
+
+ 
+<ion-tab-button tab="requests">
+  <ion-icon name="add-circle"></ion-icon>
+  <ion-label>Request</ion-label>
+ </ion-tab-button>
+
+ <ion-tab-button tab="settings">
+  <ion-icon name="settings"></ion-icon>
+  <ion-label>More</ion-label>
+ </ion-tab-button>
+
+</ion-tab-bar>
+</ion-tabs>
+
+
