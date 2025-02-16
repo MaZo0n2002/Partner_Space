@@ -1,29 +1,80 @@
-/* Add to your component's CSS */
+/* Updated enhanced styles */
 .welcome-image {
-    max-width: 600px;
+  max-width: 700px; /* Increased from 600px */
+  margin: 3rem auto 2rem; /* More vertical spacing */
+  padding: 0 1rem; /* Prevent edge touching on mobile */
+}
+
+.container {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0; /* Add vertical padding */
+}
+
+ion-title {
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 3rem); /* Responsive font size */
+  font-weight: 600;
+  margin: 2rem 0;
+  color: var(--ion-color-primary); /* Use theme color */
+  letter-spacing: 0.05em;
+}
+
+.description-text {
+  font-size: 1.4rem; /* Increased from default */
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 600px;
+  color: var(--ion-color-medium-shade);
+  padding: 0 1rem;
+}
+
+ion-fab-button {
+  --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --size: 4rem; /* Larger button */
+  transition: transform 0.2s ease;
+}
+
+ion-fab-button:hover {
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+ion-icon {
+  font-size: 2rem; /* Larger arrow icon */
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .welcome-image {
+    opacity: 0.95;
+    filter: brightness(0.95); /* Better dark mode visibility */
+  }
+  
+  .description-text {
+    color: var(--ion-color-medium-tint);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .welcome-image {
+    max-width: 90%;
     margin: 2rem auto;
   }
   
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  ion-title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .description-text {
+    font-size: 1.3rem;
+    margin: 1.5rem auto;
   }
   
   ion-fab-button {
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --size: 3.5rem;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    .welcome-image {
-      opacity: 0.9;
-    }
-  }
-
-  ion-title {
-
-    text-align: center;       /* Center align title */
-    
-
-  }
+}

@@ -1,0 +1,19 @@
+
+
+<ion-content fullscreen="true" translucent="true"> 
+  <ion-title></ion-title>
+  <ion-list>
+    <ion-card *ngFor="let claim of claimsList">
+      <ion-card-header>
+        <ion-card-title>Claim ID: {{ claim.id }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Date: {{ claim.date | date }}</p>
+        <div class="button-container">
+          <ion-button click="onClick()">See More</ion-button>
+       
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

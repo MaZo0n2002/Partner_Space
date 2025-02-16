@@ -1,15 +1,99 @@
-/* Add to your component's CSS */
+/* Updated CSS with uniform 1.3rem font size */
 .container {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .ion-text-bold {
-    font-weight: 600;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+ion-content {
+  --background: var(--ion-color-light);
+  font-size: 1.3rem; /* Base font size for all content */
+}
+
+ion-toolbar {
+  --background: transparent;
+}
+
+ion-title {
+  font-size: 1.8rem; /* Keep header title larger */
+  font-weight: 600;
+  color: var(--ion-color-dark);
+}
+
+ion-item {
+  --background: #ffffff;
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  --min-height: 56px;
+  --highlight-color-focused: var(--ion-color-primary);
+  margin: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1.3rem; /* Explicitly set for items */
+}
+
+ion-input {
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+  font-size: 1.3rem; /* Increased from 1rem */
+}
+
+ion-icon {
+  color: var(--ion-color-medium);
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.ion-text-bold {
+  font-weight: 600;
+  color: var(--ion-color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--ion-color-primary);
+  transition: opacity 0.2s ease;
+  font-size: 1.3rem; /* Explicitly set for links */
+}
+
+ion-button {
+  --border-radius: 12px;
+  --padding-top: 18px;
+  --padding-bottom: 18px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+  font-size: 1.3rem; /* Button text size */
+}
+
+/* Override Ionic's small text utility */
+.ion-text-sm {
+  font-size: 1.3rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
   }
   
   ion-item {
-    --highlight-color-focused: var(--ion-color-primary);
     --border-radius: 8px;
-    --padding-start: 0;
+    margin: 0.75rem 0;
   }
+  
+  ion-title {
+    font-size: 1.5rem; /* Header title remains larger */
+  }
+
+  /* Optional: Adjust base size for mobile */
+  ion-content {
+    font-size: 1.2rem;
+  }
+}
+

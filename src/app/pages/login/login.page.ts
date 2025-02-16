@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: false,
@@ -6,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  constructor(private router: Router) {}
 
-  constructor() { }
+  login() {
+    // Perform authentication logic here...
 
-  ngOnInit() {
+    // Redirect to Layout (Authenticated Area)
+    this.router.navigate(['/home']); // ✅ Redirect to the LayoutComponent with Tabs
   }
-
 }
