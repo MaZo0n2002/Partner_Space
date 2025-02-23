@@ -12,6 +12,7 @@ export class ClaimsPage implements OnInit {
   onClick(){
     console.log('clickable');
   }
+  
   constructor() { 
     this.claimsList = [
       {

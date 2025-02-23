@@ -1,7 +1,5 @@
-
-
-<ion-content fullscreen="true" translucent="true"> 
-  <ion-title></ion-title>
+<ion-content> 
+  <ion-title>Claims</ion-title>
   <ion-list>
     <ion-card *ngFor="let claim of claimsList">
       <ion-card-header>
@@ -10,10 +8,26 @@
       <ion-card-content>
         <p>Date: {{ claim.date | date }}</p>
         <div class="button-container">
-          <ion-button click="onClick()">See More</ion-button>
-       
+          <ion-button [id]="'click-trigger-' + claim.id">See More</ion-button>
+          <ion-popover [trigger]="'click-trigger-' + claim.id" triggerAction="click">
+            <ng-template>
+              <ion-content class="ion-padding">
+                <h3>Claim Details</h3>
+                <p><strong>ID:</strong> {{ claim.id }}</p>
+                <p><strong>Type:</strong> {{ claim.type }}</p>
+                <p><strong>Policy Number:</strong> {{ claim.policyNumber }}</p>
+                <p><strong>Date:</strong> {{ claim.date | date }}</p>
+                <p><strong>Product:</strong> {{ claim.product }}</p>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
         </div>
       </ion-card-content>
     </ion-card>
   </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" class="ion-margin">
+    <ion-fab-button [routerLink]="['/app/claims/claims-form']" >
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

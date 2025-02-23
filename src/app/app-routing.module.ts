@@ -41,8 +41,8 @@ const routes: Routes = [
       },
       {
         path: 'claims',
-        loadChildren: () => import('./pages/claims/claims.module').then(m => m.ClaimsPageModule)
-      },
+        loadChildren: () => import('./pages/claims/claims.module').then(m => m.ClaimsPageModule),
+       },
       {
         path: 'insurance',
         loadChildren: () => import('./pages/insurance/insurance.module').then(m => m.InsurancePageModule)
@@ -55,9 +55,11 @@ const routes: Routes = [
         path: 'settings',
         loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsPageModule)
       },
-      { path: '', redirectTo: 'home', pathMatch: 'full' } // ✅ Default authenticated route
+      { path: '', redirectTo: 'home', pathMatch: 'full' }, // ✅ Default authenticated route
+      
     ]
   },
+  
 
 
 ];
