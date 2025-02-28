@@ -12,8 +12,10 @@ export class ClaimsPage implements OnInit {
   onClick(){
     console.log('clickable');
   }
-  
-  constructor() { 
+  dismissPopover() {
+    this.popoverController.dismiss();
+  }
+  constructor(private popoverController: PopoverController) { 
     this.claimsList = [
       {
         id: 1,

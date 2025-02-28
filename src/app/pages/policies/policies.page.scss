@@ -1,4 +1,82 @@
 ion-header{
-    background-color: rgb(241, 241, 241);
-    text-align: center;
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* ✅ Moves button to the right */
+}
+
+ion-content {
+  --overflow: auto;  /* ✅ Ensures scrolling is enabled */
+  height: 100%;       /* ✅ Makes sure content fills the page */
+}
+
+ion-list {
+  padding-bottom: 100px; /* ✅ Prevents content from getting cut off */
+}
+
+.policy-popover {
+  --width: 400px; /* Slightly narrower without buttons */
+  --max-width: 90vw;
+  --border-radius: 12px;
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.popover-content {
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+.popover-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--ion-color-light-shade);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ion-color-dark);
   }
+}
+
+.close-btn {
+  --padding-start: 0;
+  --padding-end: 0;
+  --color: var(--ion-color-medium);
+  
+  ion-icon {
+    font-size: 1.4rem;
+  }
+}
+
+.details-grid {
+  padding: 16px;
+
+  ion-row {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--ion-color-light-shade);
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .detail-label {
+    font-weight: 500;
+    color: var(--ion-color-medium);
+    font-size: 0.95rem;
+  }
+
+  .detail-value {
+    font-weight: 500;
+    color: var(--ion-color-dark);
+    text-align: right;
+  }
+}
+
+/* Removed .action-buttons styles */

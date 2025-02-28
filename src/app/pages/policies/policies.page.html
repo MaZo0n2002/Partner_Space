@@ -4,10 +4,84 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Policies</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor="let policy of policiesList">
+      <ion-card-header>
+        <ion-card-title>PolicyNo: {{policy.policyNumber}}</ion-card-title>
+      </ion-card-header>
+     <ion-card-content>
+      <p>Date: {{policy.issueDate}}</p>
+      <div class="button-container">
+      <ion-button [id]="'click-trigger-' + policy.policyNumber">See More</ion-button>
+      <ion-popover [trigger]="'click-trigger-' + policy.policyNumber" [cssClass]="'policy-popover'" arrow="true">
+       <ng-template>
+       <ion-content class="popover-content">
+      <div class="popover-header">
+         <h2>Policy Details</h2>
+         <ion-button fill="clear" class="close-btn" (click)="dismissPopover()">
+          <ion-icon name="close"></ion-icon>
+         </ion-button>
+       </div>
+       <ion-grid class="details-grid">
+        <ion-row>
+          <ion-col size="4" class="detail-label">PolicyNo</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.policyNumber }}</ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col size="4" class="detail-label">CustomerName</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.customerName }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">LineOfBusiness</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.lineOfBusiness }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">ProductName</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.ProductName }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">IssueDate</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.issueDate }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">ExpireDate</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.expireDate }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">GrossPremium</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.GrossPremium }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">NetPremium</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.NetPremium }}</ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4" class="detail-label">TotalSum</ion-col>
+         <ion-col size="8" class="detail-value">{{ policy.TotalSum }}</ion-col>
+        </ion-row>
+
+       </ion-grid>
+      </ion-content>
+         </ng-template>
+       </ion-popover>
+    </div>
+     </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-footer>
+  <ion-fab vertical="bottom" horizontal="end" class="ion-margin">
+    <ion-fab-button>
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-footer>
 </ion-content>
