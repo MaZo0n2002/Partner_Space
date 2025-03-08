@@ -10,4 +10,88 @@
       <ion-title size="large">Settings</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- User Profile Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Profile</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-avatar slot="start">
+          <!-- <img src="https://via.placeholder.com/150" alt="User Avatar" /> -->
+        </ion-avatar>
+        <ion-label>
+          <h2>John Doe</h2>
+          <p>john.doe&#64;example.com</p>        </ion-label>
+      </ion-item>
+      <ion-button expand="block" fill="outline" (click)="editProfile()">
+        Edit Profile
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Notifications Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Notifications</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-toggle [(ngModel)]="notificationsEnabled" (ionChange)="toggleNotifications()">
+          Enable Notifications
+        </ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Notification Sound</ion-label>
+        <ion-select [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound()">
+          <ion-select-option value="default">Default</ion-select-option>
+          <ion-select-option value="chime">Chime</ion-select-option>
+          <ion-select-option value="bell">Bell</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Theme Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Theme</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Dark Mode</ion-label>
+        <ion-toggle [(ngModel)]="darkModeEnabled" (ionChange)="toggleDarkMode()">
+          Enable Dark Mode
+        </ion-toggle>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Privacy Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Privacy</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Private Account</ion-label>
+        <ion-toggle [(ngModel)]="privateAccount" (ionChange)="togglePrivateAccount()">
+          Make Account Private
+        </ion-toggle>
+      </ion-item>
+      <ion-button expand="block" fill="outline" (click)="changePassword()">
+        Change Password
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Logout Section -->
+  <ion-card>
+    <ion-card-content>
+      <ion-button expand="block" color="danger" (click)="logout()">
+        Logout
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

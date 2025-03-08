@@ -1,13 +1,46 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <!-- Insurance Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Insurance</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Total insurances: {{ insuranceMetrics.totalInsurance }}</p>
+      <p>Active insurances: {{ insuranceMetrics.activeInsurance }}</p>
+    
+      <ion-button expand="block">View Details</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Claims Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Claims</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Total Claims: {{ claimsMetrics.totalClaims }}</p>
+      <p>Open Claims: {{ claimsMetrics.openClaims }}</p>
+      <p>Closed Claims: {{ claimsMetrics.closedClaims }}</p>
+      <ion-button expand="block">View All Claims</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Policies Card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Policies</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Total Policies: {{ policiesMetrics.totalPolicies }}</p>
+      <p>Active Policies: {{ policiesMetrics.activePolicies }}</p>
+      <p>Expired Policies: {{ policiesMetrics.expiredPolicies }}</p>
+      <ion-button expand="block">View All Policies</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

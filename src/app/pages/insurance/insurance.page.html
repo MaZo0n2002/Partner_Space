@@ -1,13 +1,83 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Insurance</ion-title>
+    <ion-label>Claims</ion-label>
   </ion-toolbar>
 </ion-header>
+<ion-content> 
+  <ion-list>
+    <ion-card *ngFor="let insurance of InsuranceList">
+      <ion-card-header>
+        <ion-card-title>InsuranceNumber: {{ insurance.InsuranceNumber }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>issueDate: {{ insurance.issueDate | date }}</p>
+        <div class="button-container">
+          <ion-button [id]="'click-trigger-' +  insurance.InsuranceNumber">See More</ion-button>
+          <ion-popover [trigger]="'click-trigger-' + insurance.InsuranceNumber" triggerAction="click" 
+          [cssClass]="'claim-popover'" arrow="true">
+<ng-template>
+ <ion-content class="popover-content">
+   <div class="popover-header">
+     <h2>Claim Details</h2>
+     <ion-button fill="clear" class="close-btn" (click)="dismissPopover()">
+       <ion-icon name="close"></ion-icon>
+     </ion-button>
+   </div>
+   
+   <ion-grid class="details-grid">
+     <ion-row>
+       <ion-col size="4" class="detail-label">Claim ID</ion-col>
+       <ion-col size="8" class="detail-value">{{  insurance.InsuranceNumber}}</ion-col>
+     </ion-row>
+     
+     <!-- <ion-row>
+       <ion-col size="4" class="detail-label">Type</ion-col>
+       <ion-col size="8" class="detail-value">{{ insurance.type }}</ion-col>
+     </ion-row> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Insurance</ion-title>
-    </ion-toolbar>
-  </ion-header>
+     <ion-row>
+      <ion-col size="4" class="detail-label">expireDate </ion-col>
+      <ion-col size="8" class="detail-value">{{ insurance.expireDate  | date: 'mediumDate' }}</ion-col>
+    </ion-row>
+
+
+     <ion-row>
+       <ion-col size="4" class="detail-label">issueDate </ion-col>
+       <ion-col size="8" class="detail-value">{{ insurance.issueDate  | date: 'mediumDate' }}</ion-col>
+     </ion-row>
+
+     <ion-row>
+       <ion-col size="4" class="detail-label">Product</ion-col>
+       <ion-col size="8" class="detail-value">{{ insurance.ProductName }}</ion-col>
+     </ion-row>
+
+     <ion-row>
+      <ion-col size="4" class="detail-label">GrossPremium</ion-col>
+     <ion-col size="8" class="detail-value">{{ insurance.GrossPremium }}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" class="detail-label">NetPremium</ion-col>
+     <ion-col size="8" class="detail-value">{{ insurance.NetPremium }}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4" class="detail-label">TotalSum</ion-col>
+     <ion-col size="8" class="detail-value">{{ insurance.TotalSum }}</ion-col>
+    </ion-row>
+   </ion-grid>
+ </ion-content>
+</ng-template>
+</ion-popover>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-footer>
+  <ion-fab vertical="bottom" horizontal="end" class="ion-margin">
+    <ion-fab-button [routerLink]="['/app/claims/claims-form']" >
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-footer>
 </ion-content>

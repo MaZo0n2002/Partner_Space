@@ -48,10 +48,6 @@ const routes: Routes = [
         loadChildren: () => import('./pages/insurance/insurance.module').then(m => m.InsurancePageModule)
       },
       {
-        path: 'request',
-        loadChildren: () => import('./pages/request/request.module').then(m => m.RequestPageModule)
-      },
-      {
         path: 'settings',
         loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsPageModule)
       },
